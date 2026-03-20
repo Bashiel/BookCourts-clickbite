@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Trophy, Activity, Phone, User, ChevronRight } from "lucide-react";
+import { Phone, User, ChevronRight } from "lucide-react";
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
 import { Calendar } from "@/components/ui/calendar";
@@ -84,13 +84,13 @@ _Enviado vía Book Courts by ClickBite_`;
             <div className="grid grid-cols-2 gap-4">
               <SportCard
                 label="Pádel"
-                icon={<Trophy className="w-7 h-7" />}
+                icon={<span className="text-3xl">🎾</span>}
                 selected={sport === "Pádel"}
                 onClick={() => { setSport("Pádel"); if (step < 2) setStep(2); }}
               />
               <SportCard
                 label="Fútbol Sintético"
-                icon={<Activity className="w-7 h-7" />}
+                icon={<span className="text-3xl">⚽</span>}
                 selected={sport === "Fútbol Sintético"}
                 onClick={() => { setSport("Fútbol Sintético"); if (step < 2) setStep(2); }}
               />
